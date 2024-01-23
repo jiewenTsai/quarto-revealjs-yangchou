@@ -1,0 +1,87 @@
+---
+title: The Lineages and Histories of the Great Houses of the Seven Kingdoms
+subtitle: 七國主要貴族之世家譜系與歷史
+authors: 梅利恩（Malleon）
+date: 2000-01-01
+format:
+  yangchou-revealjs: default
+---
+
+## 守夜人誓詞
+
+長夜將至，我從今開始守望，至死方休。我將不娶妻，不封地，不生子。我將不戴寶冠，不爭榮寵。我將盡忠職守，生死於斯。我是黑暗中的利劍，長城上的守衛，抵禦寒冷的烈焰，破曉時分的光線，喚醒眠者的號角，守護王國的堅盾。我將生命與榮耀獻給守夜人，今夜如此，夜夜皆然。
+
+## 守夜人誓詞（英文版）
+
+Night gathers, and now my watch begins. It shall not end until my death. I shall take no wife, hold no lands, father no children. I shall wear no crowns and win no glory. I shall live and die at my post. I am the sword in the darkness. I am the watcher on the walls. I am the fire that burns against the cold, the light that brings the dawn, the horn that wakes the sleepers, the shield that guards the realms of men. I pledge my life and honor to the Night's Watch, for this night and all the nights to come.
+
+
+## 守夜人誓詞（數學版）
+
+當然，這裡有一個稍微複雜一點的數學式：
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2} \, dx = \sqrt{\pi}
+$$
+
+這是高斯 (Gaussian) 的標準常態分佈的積分方程，也被稱為高斯積分 (Gaussian integral)。如果您有其他特定的數學式需求，請隨時告訴我！
+
+## 守夜人誓詞（python版）
+
+如果您不想使用`scipy`，您可以使用`numpy`庫提供的`trapz`函數進行數值積分。以下是更新後的例子：
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 定義高斯函數
+def gaussian(x):
+    return np.exp(-x**2)
+
+# 計算積分
+x = np.linspace(-5, 5, 1000)
+y = gaussian(x)
+integral_result = np.trapz(y, x)
+
+# 繪製高斯分佈曲線
+plt.plot(x, y, label=r'$e^{-x^2}$')
+plt.fill_between(x, 0, y, alpha=0.2, color='blue')
+
+# 添加標籤和積分結果
+plt.title('Gaussian Distribution')
+plt.xlabel('x')
+plt.ylabel('Probability Density Function')
+
+plt.legend()
+plt.show()
+```
+
+這個例子使用`trapz`函數計算積分，其結果應該與`scipy`的`quad`函數結果相似。
+
+
+---
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 定義高斯函數
+def gaussian(x):
+    return np.exp(-x**2)
+
+# 計算積分
+x = np.linspace(-5, 5, 1000)
+y = gaussian(x)
+integral_result = np.trapz(y, x)
+
+# 繪製高斯分佈曲線
+plt.plot(x, y, label=r'$e^{-x^2}$')
+plt.fill_between(x, 0, y, alpha=0.2, color='blue')
+
+# 添加標籤和積分結果
+plt.title('Gaussian Distribution')
+plt.xlabel('x')
+plt.ylabel('Probability Density Function')
+plt.legend()
+plt.show()
+```
