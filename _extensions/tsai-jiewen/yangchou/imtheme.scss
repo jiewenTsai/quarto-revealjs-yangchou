@@ -16,8 +16,9 @@ $presentation-heading-font-weight: 500;
 $body-bg: #fafafa !default;
 $body-color: #000 !default;
 // $link-color: #EB811B !default;
-$primary-color: #303F9F; //#23373b;
-$secondary-color: #D50000; //#e84a27;
+$primary-color: #d32f2f;//#303F9F; //PRIMARY
+$triadic-color-1: #d32f81 ;//#90309f; //TRIADIC #1
+$triadic-color-2: #d3812f ;//#9f303f; //TRIADIC #2
 
 // headings
 // $presentation-heading-font: "Palatino Linotype", "Book Antiqua", Palatino,
@@ -27,18 +28,21 @@ $secondary-color: #D50000; //#e84a27;
 /*-- scss:rules --*/
 
 .reveal a {
-	line-height: 1.5em;
-	color: $secondary-color;
+  color: $triadic-color-2;
 }
 
 .reveal .footer a {
-	color: $secondary-color !important;
+	color: $triadic-color-2 !important;
 }
 
 .reveal p {}
 
+.reveal mark {
+  color: #eee;
+  background: $triadic-color-2;
+}
 .reveal strong {
-	color: $secondary-color !important;
+	color: $triadic-color-2 !important;
 }
 
 .reveal .slide ul li,
@@ -57,9 +61,13 @@ $secondary-color: #D50000; //#e84a27;
 
 h1.title {
 	//color: $primary-color;
+  background: repeating-linear-gradient(165deg, $primary-color,  $triadic-color-1 );
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
 	font-size: 1.5em;
 	text-shadow: none;
-	font-weight: 400;
+	font-weight: 700;
 	text-align: left;
 	margin-left: 15px;
 	// padding-top: 80px; // not a huge fan of the 80px drop
@@ -68,6 +76,10 @@ p.subtitle {
 	// margin-top: -10px;
 	// padding-bottom: -20px;
 	//color: $primary-color;
+	background: repeating-linear-gradient(165deg, $primary-color,  $triadic-color-1 );
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
 	text-shadow: none;
 	font-size: 1.2em;
 	text-align: left;
@@ -102,9 +114,9 @@ p.subtitle:after {
 	content: "";
 	display: block;
 	border: none;
-	background-color: $secondary-color;
-	color: $secondary-color;
-	height: 1px;
+	background-color: $triadic-color-2;
+	color: $triadic-color-2;
+	height: 2px;
 	margin: 25px 0 25px;
 }
 
@@ -114,8 +126,8 @@ h1::after {
 	content: "";
 	display: block;
 	border: none;
-	background-color: $secondary-color;
-	color: $secondary-color;
+	background-color: $triadic-color-2;
+	color: $triadic-color-2;
 	height: 1px;
 	margin: 1em 10px 0 10px;
 }
@@ -193,7 +205,8 @@ h2::after.title {
 
 .reveal h2 {
   font-size: 1.3em;
-	background-color: $primary-color; //#23373b ; //#13294b;
+	//circular1 
+  background: repeating-linear-gradient(165deg, $primary-color,  $triadic-color-1 );
 	padding: 10px 0px 5px 10px;
 	color: #fafafa;
 	border-radius: 12px; // not a fan of rounded borders
