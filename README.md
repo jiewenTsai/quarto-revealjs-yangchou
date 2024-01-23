@@ -1,6 +1,6 @@
 # quarto-revealjs-yangchou
 
-
+"Yangchou" (羊稠) is a local name in Taiwan. There is a beautiful forest trail located in that area.
 
 Installing
 You can obtain a copy of the extension by using:
