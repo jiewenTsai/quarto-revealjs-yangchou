@@ -4,8 +4,10 @@
 
 ## Features.
 
+- This work is mainly modified by the project [coatless-quarto/illinois-revealjs](https://github.com/coatless-quarto/illinois-revealjs). [^1]
 - This project used `Noto Sans CJK TC,` `Overpass,` and `Overpass Mono` from [Google fonts](https://fonts.google.com/).
-- The  
+- The tartan pattern for the H2 heading background is inspired from [CSS3 Patterns Gallery](https://projects.verou.me/css3patterns/). [^2]
+- Provide two versions of colors, indigo and red.
 
 
 ## Usage.
@@ -15,9 +17,6 @@ Copy this line and paste it into your terminal console; then, you can use this q
 ```         
 quarto use template tsai-jiewen/quarto-revealjs-yangchou
 ```
-
-
-
 
 
 
@@ -32,6 +31,6 @@ Now, I provide two versions of colors for you. Just find the file `_extensions/t
 
 ## S/O.
 
-- [coatless-quarto/illinois-revealjs](https://github.com/coatless-quarto/illinois-revealjs)
-- [CSS3 Patterns Gallery](https://projects.verou.me/css3patterns/)
+- [^1]: [coatless-quarto/illinois-revealjs](https://github.com/coatless-quarto/illinois-revealjs)
+- [^2]: [CSS3 Patterns Gallery](https://projects.verou.me/css3patterns/)
 
