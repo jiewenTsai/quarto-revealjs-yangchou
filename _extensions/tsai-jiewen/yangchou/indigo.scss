@@ -1,0 +1,304 @@
+/*-- scss:defaults --*/
+
+/* Modified version of the metropolis theme ported into Quarto by Patrick Schwartz */
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Overpass+Mono:wght@400;700&family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+$font-family-sans-serif: Overpass, "Noto Sans CJK TC", serif !default;
+$font-family-monospace: Overpass Mono, "Menlo",  monospace;
+$presentation-font-size-root: 36px;
+$presentation-line-height: 1.5em;
+$presentation-heading-font-weight: 500;
+
+// colors
+$body-bg: #fafafa !default;
+$body-color: #000 !default;
+// $link-color: #EB811B !default;
+$primary-color: #303F9F ;//#4A148C;//#303F9F; //PRIMARY
+$secondary-color: #9f303f;
+$tartan-pattern: repeating-linear-gradient(transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
+repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
+repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0,0,0,.2) 2px, rgba(0,0,0,.2) 3px, transparent 3px, transparent 5px, rgba(0,0,0,.2) 5px);;
+
+
+// headings
+// $presentation-heading-font: "Palatino Linotype", "Book Antiqua", Palatino,
+//   FreeSerif, serif !default;
+// $presentation-heading-color: #383d3d !default;
+
+/*-- scss:rules --*/
+
+.reveal a {
+  color: $secondary-color;
+}
+
+.reveal .footer a {
+	color: $secondary-color !important;
+}
+
+.reveal p {}
+
+.reveal mark {
+  color: #eee;
+  background: $secondary-color;
+}
+.reveal strong {
+	color: $secondary-color !important;
+}
+
+.reveal .slide ul li,
+.reveal .slide ol li {}
+
+// maximum height of code blocks before scrolling is used
+.reveal pre.sourceCode code {
+	max-height: 700px; // default 500
+}
+
+// title slide
+.title-slide {
+	background-color: #fafafa;
+	//border-top: 80px solid #fafafa; // do not change this, it implements a bumper
+}
+
+h1.title {
+	//color: $primary-color;
+  background: repeating-linear-gradient(165deg, $primary-color,  $secondary-color );
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	
+	text-shadow: none;
+	font-size: 1.5em;
+	text-shadow: none;
+	font-weight: 700;
+	text-align: left;
+	margin-left: 15px;
+	// padding-top: 80px; // not a huge fan of the 80px drop
+}
+p.subtitle {
+	// margin-top: -10px;
+	// padding-bottom: -20px;
+	//color: $primary-color;
+	background: repeating-linear-gradient(165deg, $primary-color,  $secondary-color );
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	
+	text-shadow: none;
+	font-size: 1.2em;
+	font-weight: 700;
+	text-align: left;
+	margin-left: 15px;
+}
+
+.reveal .quarto-title-block .quarto-title-authors {
+    //display: flex;
+    justify-content: left;
+    font-size: 1.1em;
+}
+
+p.authors {
+	text-shadow: none;
+	//font-size: 1.2em;
+	text-align: left !important;
+	//margin-left: 15px;
+	margin-bottom: -10px;
+	margin-top: 0px;
+}
+
+
+p.date {
+	text-shadow: none;
+	font-size: 1.1em;
+	text-align: left;
+	margin-left: 15px;
+	// margin-bottom: -30px;
+}
+
+p.subtitle:after {
+	content: "";
+	display: block;
+	border: none;
+	background-color: $secondary-color;
+	color: $secondary-color;
+	height: 2px;
+	margin: 25px 0 25px;
+}
+
+// Section break slide
+hr,
+h1::after {
+	content: "";
+	display: block;
+	border: none;
+	background-color: $secondary-color;
+	color: $secondary-color;
+	height: 1px;
+	margin: 1em 10px 0 10px;
+}
+
+// Override h1 style for title slide (remove section break slide style)
+hr,
+h1.title::after {
+	content: "";
+	display: block;
+	border: none;
+	background-color: transparent !important;
+	color: transparent !important;
+	height: 0px;
+	margin: 0px !important;
+}
+
+// Custom class to allow for blank slides
+.empty h1::after, .empty h2 {
+    content: "";
+    display: none;
+    border: none;
+    // background-color: #eb811b;
+    // color: #eb811b;
+    height: 0px;
+    margin: 0 auto; //reset
+}
+
+h2::after.title {
+	margin: 10px 15px 35px 0;
+}
+
+.reveal .slide-number a {
+	font-size: 120%;
+	background-color: #fafafa;
+	border-radius: 12px;
+	padding: 5px;
+}
+
+// inline
+.reveal code {
+	font-size: 70%;
+	background-color: #e0e0e0;
+	color: #000;
+	padding: 4px;
+	border-radius: 6px;
+}
+
+// code blocks
+.reveal div.sourceCode pre code {
+	font-size: 100%;
+}
+
+// code output
+.reveal pre code {
+	font-size: 100%;
+	padding-top: 15px;
+}
+
+.colored-column {
+	border: 2px solid red;
+	border-radius: 6px !important;
+	padding: 10px;
+	margin: 5px;
+}
+
+.column {
+	// #column;
+	// border: 2px solid red;
+	border-radius: 10px !important;
+	padding: 10px;
+	margin: 5px;
+	// background-color: #ededed;
+	// background-color: #eeeeee; // not background color in columns
+}
+
+.reveal h2 {
+  font-size: 1.3em;
+	//circular1 
+  //background: repeating-linear-gradient(165deg, $primary-color,  $secondary-color );
+
+  background-color: $primary-color ;
+  background-image: repeating-linear-gradient(165deg, $primary-color, $primary-color,transparent ), $tartan-pattern;
+
+color: #fafafa;
+
+	padding: 10px 0px 5px 10px;
+	
+	border-radius: 12px; // not a fan of rounded borders
+}
+
+.reveal h2:before {
+    position: absolute;
+    content: "";
+    height: 35px;
+    width: 120px;
+    top: 18px;
+    right: -75px;
+    background-image: url(../../../../../logo-illinois-block-i.png); /* Better than using an absolute path, though this can't be the best way to include an image! */
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Add special removal classes */
+h2.heading-output.removed:before{
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    top: 0;
+    right: 0;
+    background-image: none;
+}
+
+h2.heading-output.removed{
+    background-color: transparent;
+    padding: 0px;
+    color: #000000;
+}
+
+h1.heading-output.removed::after {
+    content: "";
+    display: block;
+    border: none;
+    background-color: transparent;
+    color: #000000;
+    height: 0px;
+    margin: 0;
+}
+
+/* Custom size */
+
+.reveal h3 {
+  font-size: 1.3em;
+}
+
+h5.heading-output {
+    font-size: 0.7em;
+}
+
+h6.heading-output {
+    font-size: 0.4em;
+}
+
+.small-font {
+	font-size: 70%;
+}
+
+iframe {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.center {
+	text-align: center;
+}
+
+// Custom hack to center contents of the table cell in the middle.background;
+.reveal table td {
+    vertical-align: middle;
+}
+
+
+
+.reveal .progress {
+	color: $primary-color;
+}

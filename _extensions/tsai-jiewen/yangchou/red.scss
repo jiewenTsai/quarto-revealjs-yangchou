@@ -16,9 +16,12 @@ $presentation-heading-font-weight: 500;
 $body-bg: #fafafa !default;
 $body-color: #000 !default;
 // $link-color: #EB811B !default;
-$primary-color: #d32f2f;//#303F9F; //PRIMARY
-$triadic-color-1: #d32f81 ;//#90309f; //TRIADIC #1
-$triadic-color-2: #d3812f ;//#9f303f; //TRIADIC #2
+$primary-color: #C62828 ;//#4A148C;//#303F9F; //PRIMARY
+$secondary-color: #c67728 ;
+$tartan-pattern: repeating-linear-gradient(transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
+repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
+repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0,0,0,.2) 2px, rgba(0,0,0,.2) 3px, transparent 3px, transparent 5px, rgba(0,0,0,.2) 5px);;
+
 
 // headings
 // $presentation-heading-font: "Palatino Linotype", "Book Antiqua", Palatino,
@@ -28,21 +31,21 @@ $triadic-color-2: #d3812f ;//#9f303f; //TRIADIC #2
 /*-- scss:rules --*/
 
 .reveal a {
-  color: $triadic-color-2;
+  color: $secondary-color;
 }
 
 .reveal .footer a {
-	color: $triadic-color-2 !important;
+	color: $secondary-color !important;
 }
 
 .reveal p {}
 
 .reveal mark {
   color: #eee;
-  background: $triadic-color-2;
+  background: $secondary-color;
 }
 .reveal strong {
-	color: $triadic-color-2 !important;
+	color: $secondary-color !important;
 }
 
 .reveal .slide ul li,
@@ -61,10 +64,12 @@ $triadic-color-2: #d3812f ;//#9f303f; //TRIADIC #2
 
 h1.title {
 	//color: $primary-color;
-  background: repeating-linear-gradient(165deg, $primary-color,  $triadic-color-1 );
+  background: repeating-linear-gradient(165deg, $primary-color,  $secondary-color );
 	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
+	
+	text-shadow: none;
 	font-size: 1.5em;
 	text-shadow: none;
 	font-weight: 700;
@@ -76,12 +81,14 @@ p.subtitle {
 	// margin-top: -10px;
 	// padding-bottom: -20px;
 	//color: $primary-color;
-	background: repeating-linear-gradient(165deg, $primary-color,  $triadic-color-1 );
+	background: repeating-linear-gradient(165deg, $primary-color,  $secondary-color );
 	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
+	
 	text-shadow: none;
 	font-size: 1.2em;
+	font-weight: 700;
 	text-align: left;
 	margin-left: 15px;
 }
@@ -114,8 +121,8 @@ p.subtitle:after {
 	content: "";
 	display: block;
 	border: none;
-	background-color: $triadic-color-2;
-	color: $triadic-color-2;
+	background-color: $secondary-color;
+	color: $secondary-color;
 	height: 2px;
 	margin: 25px 0 25px;
 }
@@ -126,8 +133,8 @@ h1::after {
 	content: "";
 	display: block;
 	border: none;
-	background-color: $triadic-color-2;
-	color: $triadic-color-2;
+	background-color: $secondary-color;
+	color: $secondary-color;
 	height: 1px;
 	margin: 1em 10px 0 10px;
 }
@@ -206,9 +213,15 @@ h2::after.title {
 .reveal h2 {
   font-size: 1.3em;
 	//circular1 
-  background: repeating-linear-gradient(165deg, $primary-color,  $triadic-color-1 );
+  //background: repeating-linear-gradient(165deg, $primary-color,  $secondary-color );
+
+  background-color: $primary-color ;
+  background-image: repeating-linear-gradient(165deg, $primary-color,  $primary-color,transparent ), $tartan-pattern;
+
+color: #fafafa;
+
 	padding: 10px 0px 5px 10px;
-	color: #fafafa;
+	
 	border-radius: 12px; // not a fan of rounded borders
 }
 
