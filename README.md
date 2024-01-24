@@ -4,13 +4,21 @@
 
 ## Usage.
 
+Type this line in your terminal console; then you can use this quarto-reveals template directly.
+
 ```         
 quarto use template tsai-jiewen/quarto-revealjs-yangchou
 ```
 
-This will install the extension and create an example qmd file that you can use as a starting place for your presentation slides.
+
+
+
+
 
 ## Screenshots.
+
+Now, I provide two versions of colors for you. Just find the file `_extensions/tsai-jiewen/yangchou/_extension.yml`, and change this line `theme: [default, indigo.scss]`.
+
 
 | Indigo | Red |
 |--------|-----|
