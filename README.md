@@ -31,6 +31,6 @@ Now, I provide two versions of colors for you. Just find the file `_extensions/t
 
 ## S/O.
 
-- [^1]: [coatless-quarto/illinois-revealjs](https://github.com/coatless-quarto/illinois-revealjs)
-- [^2]: [CSS3 Patterns Gallery](https://projects.verou.me/css3patterns/)
+[^1]: [coatless-quarto/illinois-revealjs](https://github.com/coatless-quarto/illinois-revealjs)
+[^2]: [CSS3 Patterns Gallery](https://projects.verou.me/css3patterns/)
 
