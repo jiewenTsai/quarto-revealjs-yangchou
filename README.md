@@ -2,6 +2,12 @@
 
 "Yangchou" (羊稠) is a local name in Taiwan. There is a beautiful forest trail located in that area.
 
+## Features.
+
+- This project used `Noto Sans CJK TC,` `Overpass,` and `Overpass Mono` from [Google fonts](https://fonts.google.com/).
+- The  
+
+
 ## Usage.
 
 Copy this line and paste it into your terminal console; then, you can use this quarto-reveals template directly.
